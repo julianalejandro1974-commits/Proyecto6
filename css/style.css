@@ -1,0 +1,135 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(42, 198, 164);
+    padding: 80px 20px;
+    color: #333333;
+}
+
+
+.calendario {
+    position: relative;
+    width: 245px;
+    margin: 0 auto;
+}
+
+
+.campo-fecha {
+    display: flex;
+    width: 100%;
+    height: 42px;
+    border: 2px solid #333333;
+}
+
+
+.campo-fecha input {
+    flex: 1;
+    min-width: 0;
+    padding: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+}
+
+.campo-fecha input::placeholder {
+    color: #222222;
+    opacity: 1;
+}
+
+
+.boton-calendario {
+    width: 43px;
+    border: none;
+    border-left: 2px solid #333333;
+    background-color: white;
+    color: black;
+    cursor: pointer;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.lista-calendario {
+    position: absolute;
+    top: 42px;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    border: 2px solid #555555;
+    z-index: 10;
+}
+
+
+.encabezado-calendario {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 10px;
+}
+
+.encabezado-calendario h2 {
+    font-size: 16px;
+    font-weight: normal;
+}
+
+
+.flecha {
+    border: none;
+    background: none;
+    font-size: 18px;
+    color: black;
+    cursor: pointer;
+}
+
+
+.cuadricula {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+}
+
+
+.dias-semana {
+    height: 28px;
+    align-items: center;
+    border-bottom: 2px solid #555555;
+}
+
+.dias-semana span {
+    font-size: 14px;
+}
+
+
+.numeros-dias span {
+    min-height: 39px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-right: 1px solid #b5b5b5;
+    border-bottom: 1px solid #b5b5b5;
+    font-size: 15px;
+}
+
+
+.numeros-dias span:nth-child(7n) {
+    border-right: none;
+}
+
+
+.numeros-dias .espacio-vacio {
+    color: transparent;
+}
+
+
+.numeros-dias span:not(.espacio-vacio):hover {
+    background-color: #e8f2ff;
+}
